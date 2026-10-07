@@ -20,7 +20,7 @@ mot de passe par une authentification par clé publique/privée.
 1. **Génération de la paire de clés** (`ssh-keygen`, algorithme ed25519) sur le poste client
 2. **Copie de la clé publique** sur le serveur dans `~/.ssh/authorized_keys` :
 ```powershell
-   type $env:USERPROFILE\.ssh\id_ed25519.pub | ssh user@10.0.0.XXX "cat >> ~/.ssh/authorized_keys"
+   type $env:USERPROFILE\.ssh\id_ed25519.pub | ssh user@10.0.XXX.XXX "cat >> ~/.ssh/authorized_keys"
 ```
 3. **Retrait de la passphrase** de la clé privée (choix pour cette VM de lab, la clé 
    restant strictement locale à mon poste) :
@@ -43,7 +43,7 @@ mot de passe par une authentification par clé publique/privée.
 6. **Vérification finale**, en forçant le client à ignorer la clé pour confirmer 
    que le mot de passe est bien rejeté :
 ```powershell
-   ssh -o PubkeyAuthentication=no user@10.0.0.XXX
+   ssh -o PubkeyAuthentication=no user@10.0.XXX.XXX
 ```
    Résultat obtenu : `Permission denied (publickey)`, sans invite de mot de passe — 
    confirme que seule l'authentification par clé est désormais acceptée.

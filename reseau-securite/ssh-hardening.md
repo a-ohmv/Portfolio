@@ -28,12 +28,15 @@ mot de passe par une authentification par clé publique/privée.
    ssh-keygen -p -f $env:USERPROFILE\.ssh\id_ed25519
 ```
 4. **Vérification de la connexion par clé**, sans mot de passe demandé
-5. **Désactivation de l'authentification par mot de passe** côté serveur, 
+5. **Désactivation de l'authentification par mot de passe** côté serveur,
    dans `/etc/ssh/sshd_config` :
 
-```PasswordAuthentication no
 ```
+   PasswordAuthentication no
+```
+
    puis redémarrage du service :
+
 ```bash
    sudo systemctl restart sshd
 ```

@@ -66,22 +66,32 @@ def scan_port():
 
     print("\nScan terminé.\n")
 
+def tester_port(ip, port):
+    s = socket.socket()
+    s.settimeout(1)
+    try:
+        result = s.connect_ex((ip, port))
+    except socket.gaierror:
+        return None
+    finally:
+        s.close()
+    if result == 0:
+        return True
+    else:
+        return False
+
 def scan_courants():
     port_liste = [21, 22, 23, 25, 53, 80, 443, 445, 3389]
     ip = demander_ip()
     if ip == "":
         return
     for port in port_liste:
-        s = socket.socket()
-        s.settimeout(1)
-        try:
-            result = s.connect_ex((ip, port))
-        except socket.gaierror:
-            print("\nEntrer une IP valide.\n")
+        result = tester_port(ip, port)
+        if result is None:
+            print("Entrer une IP valide.\n")
             return
-        if result == 0:
-            print(f"Port {port} is open")
-        s.close()
+        elif result == True:
+            print(f"Port {port}: Ouvert")
     print("\nScan terminé.\n")
 
 while True:

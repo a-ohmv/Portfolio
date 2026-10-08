@@ -1,4 +1,4 @@
-# Portfolio — L2P4
+# Portfolio — LP
 
 Candidat à un BUT Réseaux & Télécommunications (Parcoursup 2027), en autoformation
 en cybersécurité depuis août 2026 : réseau, Linux/Bash, Python, homelab virtualisé
@@ -7,7 +7,7 @@ en cybersécurité depuis août 2026 : réseau, Linux/Bash, Python, homelab virt
 Ce repo regroupe des rapports techniques rédigés au fil de mes apprentissages : contexte,
 démarche, résultats et difficultés rencontrées.
 
-> Tous les tests sont réalisés sur mes propres machines ou dans un laboratoire isolé.
+> Tous les tests sont réalisés sur mes propres machines ou dans un laboratoire isolé (Proxmox).
 
 ## Catégories
 

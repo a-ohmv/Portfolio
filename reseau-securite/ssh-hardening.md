@@ -22,7 +22,7 @@ mot de passe par une authentification par clé publique/privée.
 ```powershell
    type $env:USERPROFILE\.ssh\id_ed25519.pub | ssh user@10.0.XXX.XXX "cat >> ~/.ssh/authorized_keys"
 ```
-3. **Retrait de la passphrase** de la clé privée (la clé 
+3. **Retrait de la passphrase** de la clé privée (choix pour ce lab, la clé 
    restant strictement locale à mon poste):
 ```powershell
    ssh-keygen -p -f $env:USERPROFILE\.ssh\id_ed25519
@@ -60,7 +60,7 @@ mot de passe par une authentification par clé publique/privée.
 
 ## Résultat
 
-Accès SSH à `debian-01` désormais strictement limité à l'authentification par clé, 
+Accès SSH à `debian-01` et à la VM Kali désormais strictement limité à l'authentification par clé, 
 la clé privée ne quittant jamais mon poste. L'authentification par mot de passe, 
 vulnérable au brute-force en ligne, est totalement désactivée côté serveur.
 

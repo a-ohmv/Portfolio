@@ -10,12 +10,10 @@ démarche, résultats et difficultés rencontrées.
 > Tous les tests sont réalisés sur mes propres machines ou dans un laboratoire isolé (Proxmox).
 
 ## Catégories
+- `reseau-securite/` — durcissement (SSH par clé) et outils réseau (scanner de ports Python, outils Bash)
 
-- **reseau-securite/** — durcissement (SSH par clé) et outils réseau (scanner de ports Python)
-- **exploitation/** — exercices de tests d'intrusion (Metasploit)
-- **homelab/** — architecture de mon lab personnel (Proxmox)
-- **recuperation-materiel/** — projets de récupération/réparation matérielle
-- **veille/** — notes de conférences et veille technologique
+## À venir
+Homelab (Proxmox), exercices de tests d'intrusion en labo isolé, veille technologique.
 
 ## Compétences
 
